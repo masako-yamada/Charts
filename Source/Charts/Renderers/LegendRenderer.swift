@@ -167,6 +167,10 @@ open class LegendRenderer: Renderer
                             label = dataSet.label
                         }
                         
+                        if label?.count == 0 {
+                            continue;
+                        }
+                        
                         entries.append(
                             LegendEntry(
                                 label: label,
