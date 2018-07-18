@@ -170,6 +170,11 @@ open class LegendRenderer: Renderer
                             label = dataSet.label
                         }
                         
+                        // skip the entry if label has no text
+                        if label?.count == 0 {
+                            continue
+                        }
+                        
                         entries.append(
                             LegendEntry(
                                 label: label,
