@@ -75,6 +75,7 @@ class LineChart1ViewController: DemoBaseViewController {
         leftAxis.axisMinimum = -50
         leftAxis.gridLineDashLengths = [5, 5]
         leftAxis.drawLimitLinesBehindDataEnabled = true
+        leftAxis.labelPosition = .insideChart
         
         chartView.rightAxis.enabled = false
         

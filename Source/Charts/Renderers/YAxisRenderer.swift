@@ -68,11 +68,15 @@ open class YAxisRenderer: AxisRendererBase
             }
         }
         
+        let yLabelOffset = labelPosition == .outsideChart ?
+            yoffset - yAxis.labelFont.lineHeight :
+            yoffset - 1.75 * yAxis.labelFont.lineHeight
+        
         drawYLabels(
             context: context,
             fixedPosition: xPos,
             positions: transformedPositions(),
-            offset: yoffset - yAxis.labelFont.lineHeight,
+            offset: yLabelOffset,
             textAlign: textAlign)
     }
     
